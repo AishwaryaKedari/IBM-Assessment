@@ -1,0 +1,16 @@
+
+send = "I am a programmer"
+received = "I programmer"
+
+send_words = send.split()
+received_words = received.split()
+print(send_words)
+print(received_words)
+r = 0
+missing = []
+for i in send_words:
+     if r < len(received_words) and i == received_words[r]:
+         r += 1
+     else:
+         missing.append(i)
+print(" ".join(missing))
